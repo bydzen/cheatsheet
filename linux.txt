@@ -1,0 +1,5 @@
+find <target> -type d -exec chmod 755 {} \;                     # Change directory permissions (755) recursively
+find <target> -type f -exec chmod 644 {} \;                     # Change file permissions (644) recursively
+cp --recursive --no-preserve=all --verbose <source> <target>    # Copy files recursively without preserving attributes
+rename 'y/A-Z/a-z/; s/[ _]+/-/g' <target>                       # Replace lowercase space and underscore with dashes
+watch -d -n1 grep -e Dirty -e Writeback /proc/meminfo           # See the dirty and writeback on meminfo
