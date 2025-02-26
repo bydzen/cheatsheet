@@ -1,0 +1,1 @@
+icacls * /t /q /c /reset    # Reset ACLs recursively to default settings
