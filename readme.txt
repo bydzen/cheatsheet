@@ -1,2 +1,2 @@
 Command Line Cheatsheet
-A simple and handy command line cheatsheet for quick reference. Perfect for beginners and advanced users.
+This script provides a simple way to look up common command line and other documentation.
