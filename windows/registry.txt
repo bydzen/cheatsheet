@@ -1,0 +1,1 @@
+Computer\HKEY_CURRENT_USER\Software\Synaptics\SynTP\TouchPadRMIHID2cTM3336-2 (2FingerTapAction, decimal value: 2)   # Enable two finger tap action on Synaptics touchpad

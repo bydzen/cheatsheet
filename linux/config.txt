@@ -1,0 +1,4 @@
+# Nano (~/.nanorc)
+set tabsize 4
+set tabstospaces
+set linenumbers
