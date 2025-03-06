@@ -3,3 +3,4 @@ find <target> -type f -exec chmod 644 {} \;                     # Change file pe
 cp --recursive --no-preserve=all --verbose <source> <target>    # Copy files recursively without preserving attributes
 rename 'y/A-Z/a-z/; s/[ _]+/-/g' <target>                       # Replace lowercase space and underscore with dashes
 watch -d -n1 grep -e Dirty -e Writeback /proc/meminfo           # See the dirty and writeback on meminfo
+chown --recursive <user>:<group> <target>                       # Change permissions for user and group recursively
