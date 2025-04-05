@@ -1,9 +1,13 @@
 # Enable two finger tap action on Synaptics touchpad
-Computer\HKEY_CURRENT_USER\Software\Synaptics\SynTP\TouchPadRMIHID2cTM3336-2 (2FingerTapAction, DWORD decimal value: 2)
+Location: Computer\HKEY_CURRENT_USER\Software\Synaptics\SynTP\TouchPadRMIHID2cTM3336-2
+DWORD   : 2FingerTapAction
+Value   : Decimal (2)
 
 ---
 
 # Force disable recent app on Start Menu
-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced (Start_TrackProgs, DWORD decimal value: 0)
+Location: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+DWORD   : Start_TrackProgs
+Value   : Decimal (0)
 
 ---
