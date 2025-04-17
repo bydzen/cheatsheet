@@ -1,25 +1,27 @@
-# Nano (~/.nanorc)
+# Nano (~/.nanorc) configuration
 set tabsize 4
 set tabstospaces
 set linenumbers
 
 ---
 
-# Bash (~/.bashrc)
+# Bash (~/.bashrc) prompt with Git branch and status, exit code, and virtual environment, requires a nerd font
 PROMPT_COMMAND='
 EXIT="$?"
 BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
 [ -z "$BRANCH" ] && BRANCH="no-branch"
 GIT_STATUS=$(git status --porcelain 2>/dev/null)
 [ -n "$GIT_STATUS" ] && GIT_STATE="*dirty*" || GIT_STATE="clean"
-
+VENV=""
+if [ -n "$VIRTUAL_ENV" ]; then
+  VENV="(`basename $VIRTUAL_ENV`) "
+fi
 if [ "$EXIT" -ne 0 ]; then
   STATUS_ICON="\[\e[1;31m\] $EXIT\[\e[0m\]"
 else
   STATUS_ICON="\[\e[1;32m\]\[\e[0m\]"
 fi
-
-PS1="\n\[\e[1;36m\]\u@\h\[\e[2m\] (\@)\[\e[0m\] \[\e[2m\]($GIT_STATE)\[\e[0m\] \[\e[1;33m\] $BRANCH\[\e[0m\] $STATUS_ICON\n\[\e[1;34m\] \w\[\e[0m\] \$ "
+PS1="\n\[\e[1;36m\]$VENV\u@\h\[\e[2m\] (\@)\[\e[0m\] \[\e[2m\]($GIT_STATE)\[\e[0m\] \[\e[1;33m\] $BRANCH\[\e[0m\] $STATUS_ICON\n\[\e[1;34m\] \w\[\e[0m\] \$ "
 '
 
 ---
