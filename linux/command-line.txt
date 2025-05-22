@@ -34,6 +34,16 @@ xinput --set-prop <id> "libinput Scrolling Pixel Distance" <value>
 ---
 
 # Sync file update if the size is different and preserve all
-sudo rsync -avhi --progress --size-only /source/ /destination/
+sudo rsync -avhi --progress --size-only <source> <destination>
+
+---
+
+# Show differences between two directories recursively
+diff -rq <directory1> <directory2>
+
+---
+
+# Update timestamp of all files and directories recursively
+find <target> -exec touch {} \;
 
 ---
