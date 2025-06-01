@@ -1,4 +1,4 @@
 # Reset file permissions recursively
-icacls * /t /q /c /reset
+icacls <target> /t /q /c /reset
 
 ---
