@@ -1,1 +1,4 @@
-icacls * /t /q /c /reset    # Reset ACLs recursively to default settings
+# Reset file permissions recursively
+icacls * /t /q /c /reset
+
+---
