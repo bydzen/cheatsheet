@@ -32,3 +32,8 @@ chown --recursive <user>:<group> <target>
 xinput --set-prop <id> "libinput Scrolling Pixel Distance" <value>
 
 ---
+
+# Sync file update if the size is different and preserve all
+sudo rsync -avhi --progress --size-only /source/ /destination/
+
+---
